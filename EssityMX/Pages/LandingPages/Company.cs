@@ -22,33 +22,27 @@ namespace EssityMX.Pages.LandingPages
 		IWebElement CompanyHeroBanner => Driver.FindElement
 			(By.CssSelector("body > div:nth-child(12) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
 
-		IWebElement CompanyHeroBannerImage => Driver.FindElement(By.XPath("//img[@class='img lazy loaded']"));
+		IWebElement CompanyHeroBannerImage => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
 
 		//2-col
 		IWebElement TheFirstBoxTwoCol => Driver.FindElement
 			(By.CssSelector("body > div:nth-child(13) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)"));
 
-		IWebElement TheFirstBoxTwoColImage => Driver.FindElement(By.XPath("//div[@class='grid col-2']//div[1]//div[1]//img[1]"));
+		IWebElement TheFirstBoxTwoColImage => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[1]/div[1]/img[1]"));
 
 		IWebElement TheSecondBoxTwoCol => Driver.FindElement
 			(By.CssSelector("body > div:nth-child(13) > section:nth-child(1) > div:nth-child(1) > div:nth-child(2)"));
 
-		IWebElement TheSecondBoxTwoColImage => Driver.FindElement(By.XPath("//div[@class='grid col-2']//div[1]//div[1]//img[1]"));
+		IWebElement TheSecondBoxTwoColImage => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[2]/div[1]/img[1]"));
 
 		//3-col
-		IWebElement TheFirstBoxThreeCol => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(14) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
+		IWebElement TheFirstBoxThreeCol => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[1]"));
+		IWebElement TheFirstBoxThreeColImage => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[1]/div[1]/img[1]"));
 
-		IWebElement TheFirstBoxThreeColImage => Driver.FindElement
-			(By.XPath("//div[@class='cta js-cta-clickable cta-clickable bg-tertiary']//img[1]"));
+		IWebElement TheSecondBoxThreeCol => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[2]"));
+		IWebElement TheSecondBoxThreeColImage => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[2]/div[1]/img[1]"));
 
-		IWebElement TheSecondBoxThreeCol => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(14) > section:nth-child(1) > div:nth-child(1) > div:nth-child(2)"));
-
-		IWebElement TheSecondBoxThreeColImage => Driver.FindElement(By.XPath("//div[@class='grid col-3']//div[1]//div[1]//img[1]"));
-
-		IWebElement TheThirdBoxThreeCol => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(14) > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1)"));
+		IWebElement TheThirdBoxThreeCol => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[3]/div[1]"));
 
 
 		//HeroBanner

@@ -19,11 +19,14 @@ namespace EssityMX.Pages.HomePage
 
 		IWebElement FirstHeroBanner => Driver.FindElement
 			(By.XPath("//body/section[contains(@class,'section section--hero')]/div[contains(@typeof,'Region')]/div[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement FirstHeroBannerImg => Driver.FindElement(By.XPath("//body/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
 		IWebElement BrandComponent => Driver.FindElement(By.CssSelector(".hero-brands-list.js-brands-carousel"));
 		IWebElement SecondHeroBanner => Driver.FindElement
 			(By.XPath("//body/section[@class='section section--hero']/div[@typeof='Region']/div[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement SecondHeroBannerImg => Driver.FindElement(By.XPath("//body/section[1]/div[1]/div[3]/div[1]/div[1]/div[1]/img[1]"));
 		IWebElement ThirdHeroBanner => Driver.FindElement
 			(By.XPath("//body/section[@class='section section--hero']/div[@typeof='Region']/div[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement ThirdHeroBannerImg => Driver.FindElement(By.XPath("//body/section[1]/div[1]/div[4]/div[1]/div[1]/div[1]/img[1]"));
 
 		//The first Hero banner
 		public bool IsFirstHeroBannerVisible()
@@ -33,7 +36,7 @@ namespace EssityMX.Pages.HomePage
 
 		public bool IsFirstImageOk()
 		{
-			return AvailabilityUtil.GetDataSrcAttribute(FirstHeroBanner, Driver);
+			return AvailabilityUtil.GetDataSrcAttribute(FirstHeroBannerImg, Driver);
 		}
 
 		public bool IsBrandComponentVisible()
@@ -49,7 +52,7 @@ namespace EssityMX.Pages.HomePage
 
 		public bool IsSecondImageOK()
 		{
-			return AvailabilityUtil.GetDataSrcAttribute(SecondHeroBanner, Driver);
+			return AvailabilityUtil.GetDataSrcAttribute(SecondHeroBannerImg, Driver);
 		}
 
 		//The Third Hero banner
@@ -60,7 +63,7 @@ namespace EssityMX.Pages.HomePage
 
 		public bool IsThirdImageOK()
 		{
-			return AvailabilityUtil.GetDataSrcAttribute(ThirdHeroBanner, Driver);
+			return AvailabilityUtil.GetDataSrcAttribute(ThirdHeroBannerImg, Driver);
 		}
 		
 

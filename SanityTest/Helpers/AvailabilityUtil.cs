@@ -37,18 +37,18 @@ namespace SanityTest.Helpers
 		{
 			try
 			{
-				WaitUtil.WaitToBeVisible(webElement, driver);
 				string datasrc = webElement.GetAttribute("data-srcset");
 				if (datasrc != null)
 				{
-					LogUtil.Log("Data src has found");
+					LogUtil.Log("Data-srcset has found");
+					return RestResponseValidation.GetStatusCode(datasrc).Result;
 				}
 				else
 				{
-					LogUtil.Log("Data src has NOT found");
+					LogUtil.Log("Data-srcset has NOT found");
+					return false;
 				}
-				LogUtil.Log($"[HTTP Status]: {RestResponseValidation.GetStatusCode(datasrc).Result}");
-				return RestResponseValidation.GetStatusCode(datasrc).Result;
+				
 			}
 			catch (Exception e)
 			{

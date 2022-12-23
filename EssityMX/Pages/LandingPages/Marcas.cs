@@ -19,10 +19,9 @@ namespace EssityMX.Pages.LandingPages
 		}
 
 		//The first hero banner
-		IWebElement TheFirstHeroBanner => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(12) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
+		IWebElement TheFirstHeroBanner => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]"));
 
-		IWebElement TheFirstHeroBannerImage => Driver.FindElement(By.CssSelector("img[alt='GRUPPBILD_ALLA-PRODUKTER-PÅ-RAD-PQED.jpg ']"));
+		IWebElement TheFirstHeroBannerImage => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
 
 		//Brand Filters
 		IWebElement SearchBrandField => Driver.FindElement(By.CssSelector("#search-bar-search"));
@@ -62,16 +61,12 @@ namespace EssityMX.Pages.LandingPages
 
 		//FirstRowCTABoxes
 		//TwoColumnBoxes
-		IWebElement TheFirstTwoColumnBox => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(14) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
-		IWebElement TheSecondTwoColumnBox => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(14) > section:nth-child(1) > div:nth-child(1) > div:nth-child(2)"));
+		IWebElement TheFirstTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[1]"));
+		IWebElement TheSecondTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[2]"));
 		//TheSecondRowCTABoxes
 		//TwoColumnBoxes
-		IWebElement TheThirdTwoColumnBox => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(14) > section:nth-child(1) > div:nth-child(1) > div:nth-child(3)"));
-		IWebElement TheFourthTwoColumnBox => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(14) > section:nth-child(1) > div:nth-child(1) > div:nth-child(2)"));
+		IWebElement TheThirdTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[3]"));
+		IWebElement TheFourthTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[4]"));
 
 		//Filters
 		public bool IsSearchFieldVisible() => AvailabilityUtil.IsElementDisplayed(SearchBrandField);

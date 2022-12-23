@@ -11,15 +11,33 @@ namespace SanityTest.Helpers
 {
 	public static class RestResponseValidation
 	{
-		public  static async Task<bool> GetStatusCode(string url)
+		public  static async Task<bool> GetStatusCode(string getUrl)
 		{
-			RestClient restClient = new RestClient();
-			RestRequest restRequest = new RestRequest(url, Method.Get);
-			RestResponse restResponse = await restClient.ExecuteAsync(restRequest);
-			int responseCode = (int)restResponse.get_StatusCode();
-
-			return responseCode == 200;
+			try
+			{
+				RestClient restClient = new RestClient();
+				RestRequest restRequest = new RestRequest(getUrl, Method.Get);
+				RestResponse restResponse = await restClient.ExecuteAsync(restRequest);
+				int responseCode = (int)restResponse.StatusCode;
+				if (responseCode == 200)
+				{
+					LogUtil.Log("Info[Rest]: Response is 200");
+					return true;
+				}
+				else
+				{
+					LogUtil.Log("Error[Rest]: Response is not 200");
+					return false;
+				}
+			}
+			catch(Exception e)
+			{
+				LogUtil.Log($"Error[RestReposnse]{e.Message}");
+				return false;
+			}
+				
 		}
+		
 		//public  static async Task<bool> GetStatusCode(string url)
 		//{
 		//	HttpClient restClient = new HttpClient();

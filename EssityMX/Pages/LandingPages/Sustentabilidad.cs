@@ -21,26 +21,21 @@ namespace EssityMX.Pages.LandingPages
 		IWebElement HeroBanner_Img => Driver.FindElement
 			(By.CssSelector("section.section div.container div.banner.banner--regular.bg-primary div.media div.media-overlay > img.img.lazy.entered.loaded"));
 		//Stacked promoboxed
-		IWebElement TwoColumnBoxStacked => Driver.FindElement
-			(By.XPath("//body/div[8]/section[1]/div[1]/div[1]"));
-		IWebElement TwoColumnBoxStacked_Img => Driver.FindElement
-			(By.XPath("//div[@class='grid col-2']//div[1]//div[1]//div[1]//img[1]"));
-		IWebElement TheFirstStackedBox => Driver.FindElement
-			(By.XPath("//body/div[8]/section[1]/div[1]/div[2]/div[1]"));
-		IWebElement TheFirstStackedBox_Img => Driver.FindElement
-			(By.XPath("//div[@class='grid col-2 carousel cta-carousel js-card-carousel']//div[1]//div[1]//img[1]"));
+		IWebElement TwoColumnBoxStacked => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[1]"));
+		IWebElement TwoColumnBoxStacked_Img => Driver.FindElement(By.XPath("//div[@class='grid col-2']//div[1]//div[1]//div[1]//img[1]"));
+
+		IWebElement TheFirstStackedBox => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[2]/div[1]"));
+		IWebElement TheFirstStackedBox_Img => Driver.FindElement(By.XPath("//div[@class='grid col-2 carousel cta-carousel js-card-carousel']//div[1]//div[1]//img[1]"));
+
 		IWebElement TheSecondStackedBox => Driver.FindElement
 			(By.CssSelector("body > div:nth-child(13) > section:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)"));
-		IWebElement TheSecondStackedBox_Img => Driver.FindElement
-			(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[2]/div[1]/img[1]"));
-		IWebElement TheThirdStackedBox => Driver.FindElement
-			(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[3]"));
-		IWebElement TheThirdStackedBox_Img => Driver.FindElement
-			(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[3]/div[1]/img[1]"));
-		IWebElement TheFourthStackedBox => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(13) > section:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4)"));
-		IWebElement TheFourthStackedBox_Img => Driver.FindElement
-			(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[4]/div[1]/img[1]"));
+		IWebElement TheSecondStackedBox_Img => Driver.FindElement(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[2]/div[1]/img[1]"));
+
+		IWebElement TheThirdStackedBox => Driver.FindElement(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[3]"));
+		IWebElement TheThirdStackedBox_Img => Driver.FindElement(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[3]/div[1]/img[1]"));
+
+		IWebElement TheFourthStackedBox => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[2]/div[4]"));
+		IWebElement TheFourthStackedBox_Img => Driver.FindElement(By.XPath("//body[1]/div[8]/section[1]/div[1]/div[2]/div[4]/div[1]/img[1]"));
 		//The First row of the two column promoboxes
 		IWebElement TheFirstTwoColumnBox => Driver.FindElement
 			(By.XPath("//body[1]/div[9]/section[1]/div[1]/div[1]"));
