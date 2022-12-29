@@ -62,8 +62,8 @@ namespace SanityTest.Helpers
 			try
 			{
 				SelectElement selectElement = new SelectElement(webElement);
-				//selectElement.SelectByText(text);
-				selectElement.SelectByValue(text);
+				selectElement.SelectByText(text);
+				//selectElement.SelectByValue(text);
 				LogUtil.Log("Info[SelectOn]:Item has been selected");
 			}
 			catch (Exception e)

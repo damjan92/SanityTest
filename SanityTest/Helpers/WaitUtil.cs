@@ -115,6 +115,7 @@ namespace SanityTest.Helpers
 			{
 				wait.Until(ExpectedConditions.ElementToBeClickable(webElement));
 				LogUtil.Log("[WaitToBeClickable]: Element is clickable");
+				ClickUtil.Click(webElement);
 				return true;
 			}
 			catch (Exception e)

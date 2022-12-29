@@ -18,19 +18,17 @@ namespace EssityMX.Pages.LandingPages
 
 		//Hero banner
 		IWebElement HeroBanner => Driver.FindElement(By.XPath("//body/div[@typeof='Region']/section[@class='section']/div[@class='container']/div[1]"));
-		IWebElement HeroBannerImg => Driver.FindElement(By.XPath("//div[@typeof='Region']//div[@class='container']//div[1]//div[2]//img[1]"));
+		IWebElement HeroBannerImg => Driver.FindElement(By.CssSelector("img[alt*='Manufacturing-guy-horizontal.jpg']"));
 
 		//The first promobox
 		IWebElement TheFirstPromobox => Driver.FindElement
 			(By.XPath("//div[contains(@class,'bg-primary')]//div//div[contains(@class,'banner--flipped')]"));
-		IWebElement TheFirstPomoboxImg => Driver.FindElement
-			(By.XPath("(//img[@alt='Company_Animation_US_HMS .jpg'])[1]"));
+		IWebElement TheFirstPomoboxImg => Driver.FindElement(By.CssSelector("img[alt='Company_Animation_US_HMS .jpg']"));
 
 		//The second promobox
 		IWebElement TheSecondPromobox => Driver.FindElement
 			(By.XPath("//div[contains(@class,'bg-secondary')]//div//div[contains(@class,'banner--flipped')]"));
-		IWebElement TheSecondPrombooxImg => Driver.FindElement
-			(By.XPath("(//img[@class='img lazy entered error'])[1]"));
+		IWebElement TheSecondPrombooxImg => Driver.FindElement(By.XPath("//body/div[8]/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
 
 		//TheStackPromobox
 		IWebElement TheStackedPromobox => Driver.FindElement(By.XPath("//body/div[@class='container']/section[2]/div[1]/div[1]"));

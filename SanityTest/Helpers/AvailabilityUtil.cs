@@ -37,15 +37,15 @@ namespace SanityTest.Helpers
 		{
 			try
 			{
-				string datasrc = webElement.GetAttribute("data-srcset");
+				string datasrc = webElement.GetAttribute("data-src");
 				if (datasrc != null)
 				{
-					LogUtil.Log("Data-srcset has found");
-					return RestResponseValidation.GetStatusCode(datasrc).Result;
+					LogUtil.Log("Srcset has found");
+					return RestResponseValidation.GetStatusCodeHttp(datasrc).Result;
 				}
 				else
 				{
-					LogUtil.Log("Data-srcset has NOT found");
+					LogUtil.Log("Srcset has NOT found");
 					return false;
 				}
 				

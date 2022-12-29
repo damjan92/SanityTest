@@ -16,13 +16,11 @@ namespace EssityMX.Pages.LandingPages
 			Driver = driver;
 		}
 
-		IWebElement HeroBanner => Driver.FindElement
-			(By.CssSelector("body > div:nth-child(12) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
-		IWebElement HeroBanner_Img => Driver.FindElement
-			(By.CssSelector("section.section div.container div.banner.banner--regular.bg-primary div.media div.media-overlay > img.img.lazy.entered.loaded"));
+		IWebElement HeroBanner => Driver.FindElement(By.CssSelector("body > div:nth-child(12) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
+		IWebElement HeroBanner_Img => Driver.FindElement(By.CssSelector("img[alt*='father_with_kids_in_forrest_1920x1080.jpg']"));
 		//Stacked promoboxed
 		IWebElement TwoColumnBoxStacked => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[1]"));
-		IWebElement TwoColumnBoxStacked_Img => Driver.FindElement(By.XPath("//div[@class='grid col-2']//div[1]//div[1]//div[1]//img[1]"));
+		IWebElement TwoColumnBoxStacked_Img => Driver.FindElement(By.CssSelector("img[alt*='Essity-SDG-approach.jpg']"));
 
 		IWebElement TheFirstStackedBox => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[2]/div[1]"));
 		IWebElement TheFirstStackedBox_Img => Driver.FindElement(By.XPath("//div[@class='grid col-2 carousel cta-carousel js-card-carousel']//div[1]//div[1]//img[1]"));
@@ -53,16 +51,16 @@ namespace EssityMX.Pages.LandingPages
 		IWebElement TheFourthTwoColumnBox => Driver.FindElement
 			(By.XPath("//body[1]/div[9]/section[2]/div[1]/div[2]"));
 		IWebElement TheFourthTwoColumnBox_Img => Driver.FindElement
-			(By.XPath("//body/div[contains(@class,'container')]/section[1]/div[1]/div[1]/div[1]/img[1]"));
+			(By.CssSelector("img[alt*='SIB Cover EN.PNG']"));
 		//The third row of the column promoboxes
 		IWebElement TheFifthTwoColumnBox => Driver.FindElement
 			(By.XPath("//body[1]/div[9]/section[3]/div[1]/div[1]"));
 		IWebElement TheFifthTwoColumnBox_Img => Driver.FindElement
-			(By.XPath("//body/div[@class='container']/section[1]/div[1]/div[1]/div[1]/img[1]"));
+			(By.CssSelector("img[alt*='CO2-Icon-1920x1080.jpg']"));
 		IWebElement TheSixthTwoColumnBox => Driver.FindElement
 			(By.XPath("//body[1]/div[9]/section[3]/div[1]/div[2]"));
 		IWebElement TheSixthTwoColumnBox_Img => Driver.FindElement
-			(By.XPath("//body/div[@class='container']/section[1]/div[1]/div[1]/div[1]/img[1]"));
+			(By.CssSelector("img[alt*='HHReportCover2020-2880x1300.jpg']"));
 
 
 		//Are components are displayed

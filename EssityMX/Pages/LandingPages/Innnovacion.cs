@@ -17,7 +17,7 @@ namespace EssityMX.Pages.LandingPages
 
 		//Hero Banner
 		IWebElement HeroBanner => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]"));
-		IWebElement HeroBannerImg => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement HeroBannerImg => Driver.FindElement(By.CssSelector("img[alt*='EasyCube1-2880x1300.jpg ']"));
 
 		//Two column CTA
 		IWebElement TheFirstTwoColumnCta => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[1]"));

@@ -22,25 +22,25 @@ namespace EssityMX.Pages.LandingPages
 		IWebElement CompanyHeroBanner => Driver.FindElement
 			(By.CssSelector("body > div:nth-child(12) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
 
-		IWebElement CompanyHeroBannerImage => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement CompanyHeroBannerImage => Driver.FindElement(By.CssSelector("img[alt*='Woman_With_Man_Finger_Patch_1920x1080']"));
 
 		//2-col
 		IWebElement TheFirstBoxTwoCol => Driver.FindElement
 			(By.CssSelector("body > div:nth-child(13) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)"));
 
-		IWebElement TheFirstBoxTwoColImage => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement TheFirstBoxTwoColImage => Driver.FindElement(By.CssSelector("img[alt*='Essity products including BSN']"));
 
 		IWebElement TheSecondBoxTwoCol => Driver.FindElement
 			(By.CssSelector("body > div:nth-child(13) > section:nth-child(1) > div:nth-child(1) > div:nth-child(2)"));
 
-		IWebElement TheSecondBoxTwoColImage => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[2]/div[1]/img[1]"));
+		IWebElement TheSecondBoxTwoColImage => Driver.FindElement(By.CssSelector("img[alt*='Magnus Groth']"));
 
 		//3-col
 		IWebElement TheFirstBoxThreeCol => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[1]"));
-		IWebElement TheFirstBoxThreeColImage => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement TheFirstBoxThreeColImage => Driver.FindElement(By.CssSelector("img[alt*='_M4A0407.jpg']"));
 
 		IWebElement TheSecondBoxThreeCol => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[2]"));
-		IWebElement TheSecondBoxThreeColImage => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[2]/div[1]/img[1]"));
+		IWebElement TheSecondBoxThreeColImage => Driver.FindElement(By.CssSelector("img[alt*='Woman_and_Man_Smartphone_Browsing_1920x1080.jpg']"));
 
 		IWebElement TheThirdBoxThreeCol => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[3]/div[1]"));
 

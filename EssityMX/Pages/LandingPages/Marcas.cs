@@ -19,9 +19,9 @@ namespace EssityMX.Pages.LandingPages
 		}
 
 		//The first hero banner
-		IWebElement TheFirstHeroBanner => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]"));
+		IWebElement TheFirstHeroBanner => Driver.FindElement(By.CssSelector("div[class*='banner--regular']"));
 
-		IWebElement TheFirstHeroBannerImage => Driver.FindElement(By.XPath("//body/div[7]/section[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement TheFirstHeroBannerImage => Driver.FindElement(By.CssSelector("img[alt*='GRUPPBILD_ALLA-PRODUKTER-PÅ-RAD-PQED.jpg']"));
 
 		//Brand Filters
 		IWebElement SearchBrandField => Driver.FindElement(By.CssSelector("#search-bar-search"));
@@ -29,42 +29,41 @@ namespace EssityMX.Pages.LandingPages
 		IWebElement CategoryBrandSelector => Driver.FindElement(By.CssSelector("#select2-select-component-container"));
 
 		//Brands
-		IWebElement Tork => Driver.FindElement(By.XPath("//body/div[8]/section[1]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]"));
-		IWebElement Libero => Driver.FindElement(By.CssSelector(".brand-list-link[href='https://www.libero.com/']"));
-		IWebElement Familia => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.familiainstitucional.com/']"));
-		IWebElement Vinda => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.vindapaper.com/en/product/index.html']"));
-		IWebElement Drypers => Driver.FindElement(By.CssSelector(".brand-list-link[href='https://www.drypers.com.my/']"));
-		IWebElement Pequenin => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.pequenin.com/']"));
-		IWebElement Colhogar => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.colhogar.com/']"));
-		IWebElement Cosy => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.cosy.co.at/']"));
-		IWebElement Cushelle => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.cushelle.com/']"));
-		IWebElement Edet => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.edet.se/']"));
-		IWebElement Favorita => Driver.FindElement(By.CssSelector("div[data-country='ar bo br cl co ec py pe uy ve'] a[class='brand-list-link']"));
-		IWebElement Lotus => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.lotus-planete.com/']"));
-		IWebElement Okay => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.okay.fr/']"));
-		IWebElement Regio => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.papelregio.com/']"));
-		IWebElement Tempo => Driver.FindElement(By.CssSelector(".brand-list-link[href='https://www.tempo-world.com/de-de/start']"));
-		IWebElement Velver => Driver.FindElement(By.CssSelector("div[class='js-brand-list grid col-5'] div:nth-child(1) a:nth-child(1)"));
-		IWebElement Zewa => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.zewa.de/']"));
-		IWebElement Bodyform => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.bodyform.co.uk/?epslanguage=en']"));
-		IWebElement Libresse => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.libresse.com/']"));
-		IWebElement Nana => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.libresse.com/']"));
-		IWebElement Nosotras => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.nosotrasonline.com/']"));
-		IWebElement Nuveina => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.nosotrasonline.com/']"));
-		IWebElement Saba => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.saba.com.mx/']"));
-		IWebElement Tena => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.tena.com.mx/']"));
-		IWebElement Leukoplast => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.tena.com.mx/']"));
-		IWebElement Jobst => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.jobst.com/']"));
-		IWebElement DeltaCast => Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.jobst.com/']"));
-		IWebElement Cutimed => 
-			Driver.FindElement(By.CssSelector(".brand-list-link[href='http://www.bsnmedical.com/products/wound-care-vascular/category-product-search/advanced-wound-care/wound-bed-preparation/cutimedr-sorbactr.html']"));
+		IWebElement Tork => Driver.FindElement(By.CssSelector("img[alt*='Tork']"));
+		IWebElement Libero => Driver.FindElement(By.CssSelector("img[alt*='Libero']"));
+		IWebElement Familia => Driver.FindElement(By.CssSelector("img[alt='familia_Logo_highres.png']"));
+		IWebElement Vinda => Driver.FindElement(By.CssSelector("img[alt*='Vinda']"));
+		IWebElement Drypers => Driver.FindElement(By.CssSelector("img[alt*='drypers']"));
+		IWebElement Pequenin => Driver.FindElement(By.CssSelector("img[alt*='LOGO pequenin']"));
+		IWebElement Colhogar => Driver.FindElement(By.CssSelector("img[alt*='Colhogar']"));
+		IWebElement Cosy => Driver.FindElement(By.CssSelector("img[alt='Cosy Logo']"));
+		IWebElement Cushelle => Driver.FindElement(By.CssSelector("img[alt='Cushelle Logo 2017.png']"));
+		IWebElement Edet => Driver.FindElement(By.CssSelector("img[alt='Edet_SE-NOR_Logo.png']"));
+		IWebElement Favorita => Driver.FindElement(By.CssSelector("img[alt='FAVORITA_Logo_highres.png']"));
+		IWebElement Lotus => Driver.FindElement(By.CssSelector("img[alt*='Lotus_Logo.png']"));
+		IWebElement Okay => Driver.FindElement(By.CssSelector("img[alt='HHNEW_OKAY_ELEPHANT_LOGO_highres.png']"));
+		IWebElement Regio => Driver.FindElement(By.CssSelector("img[alt='Regio_highres.png']"));
+		IWebElement Tempo => Driver.FindElement(By.CssSelector("img[alt='Tempo Logo DE/AT/CH']"));
+		IWebElement Velver => Driver.FindElement(By.CssSelector("img[alt='Velvet_Logo_highres.png']"));
+		IWebElement Zewa => Driver.FindElement(By.CssSelector("img[alt*='Zewa_Logo_RGB']"));
+		IWebElement Bodyform => Driver.FindElement(By.CssSelector("img[alt='SCA_Bodf_Logo_EBU_SML_RGB.png']"));
+		IWebElement Libresse => Driver.FindElement(By.CssSelector("img[alt='SCA_Lib_Logo_EBU_SML_RGB.png']"));
+		IWebElement Nana => Driver.FindElement(By.CssSelector("img[alt='Nana_Logo_EBU_SML_RGB.jpg']"));
+		IWebElement Nosotras => Driver.FindElement(By.CssSelector("img[alt*='Nosotras-300x300.jpg ']"));
+		IWebElement Nuveina => Driver.FindElement(By.CssSelector("img[alt='SCA_Nuve_Logo_EBU_SML_RGB.png']"));
+		IWebElement Saba => Driver.FindElement(By.CssSelector("img[alt='SCA_Saba_Logo_EBU_SML_RGB.png']"));
+		IWebElement Tena => Driver.FindElement(By.CssSelector("img[alt*='TENA-300x300.jpg ']"));
+		IWebElement Leukoplast => Driver.FindElement(By.CssSelector("img[alt*='Leukoplast logo.jpg']"));
+		IWebElement Jobst => Driver.FindElement(By.CssSelector("img[alt*='JOBST logo.jpg ']"));
+		IWebElement DeltaCast => Driver.FindElement(By.CssSelector("img[alt*='Delta-Cast.jpg']"));
+		IWebElement Cutimed => Driver.FindElement(By.CssSelector("img[alt*='Cutimed logo.jpg']"));
 
-		//FirstRowCTABoxes
-		//TwoColumnBoxes
+		//First Row CTA
+		//Two Column Boxes
 		IWebElement TheFirstTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[1]"));
 		IWebElement TheSecondTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[2]"));
-		//TheSecondRowCTABoxes
-		//TwoColumnBoxes
+		//The Second Row CTA
+		//Two Column Boxes
 		IWebElement TheThirdTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[3]"));
 		IWebElement TheFourthTwoColumnBox => Driver.FindElement(By.XPath("//body/div[9]/section[1]/div[1]/div[4]"));
 
@@ -102,7 +101,7 @@ namespace EssityMX.Pages.LandingPages
 			try
 			{
 				SelectUtil.SelectElementByText(CategoryBrandSelector, "Feminine Care");
-				if (AvailabilityUtil.IsElementDisplayed(Bodyform) && !AvailabilityUtil.IsElementDisplayed(Tork))
+				if (WaitUtil.WaitToBeVisible(Libresse, Driver) && !WaitUtil.WaitToBeVisible(Tork, Driver))
 				{
 					LogUtil.Log("Info[CategoryFilter] Result is Femine care");
 					return true;
@@ -122,7 +121,7 @@ namespace EssityMX.Pages.LandingPages
 			try
 			{
 				SelectUtil.SelectElementByText(CountryBrandSelector, "Australia");
-				if (AvailabilityUtil.IsElementDisplayed(Tork) && !AvailabilityUtil.IsElementDisplayed(Libresse))
+				if (WaitUtil.WaitToBeVisible(Tork, Driver) && !WaitUtil.WaitToBeVisible(Libresse, Driver))
 				{
 					LogUtil.Log("Info[CountryFilter] Result is search by Australia");
 					return true;
@@ -138,6 +137,7 @@ namespace EssityMX.Pages.LandingPages
 
 		//Is The first hero banner
 		public bool IsTheFristHeroBannerVisible() => AvailabilityUtil.IsElementDisplayed(TheFirstHeroBanner);
+		public bool IsTheFirstHeroBannerImgStatusOk() => AvailabilityUtil.GetDataSrcAttribute(TheFirstHeroBannerImage, Driver);
 
 		//Tork
 		public bool IsTorkLogoVisible() => AvailabilityUtil.IsElementDisplayed(Tork);
@@ -157,11 +157,15 @@ namespace EssityMX.Pages.LandingPages
 
 		//Drypers
 		public bool IsDrypersLogoVisible() => AvailabilityUtil.IsElementDisplayed(Drypers);
-		public bool IsDrypersLogoOk() => AvailabilityUtil.GetDataSrcAttribute(Drypers, Driver);
+		public bool IsDrypersLogoOk()
+		{
+			WaitUtil.WaitToBeVisible(Drypers, Driver);
+			return AvailabilityUtil.GetDataSrcAttribute(Drypers, Driver);
+		}
 
 		//Pequenin
 		public bool IsPequieninLogoVisible() => AvailabilityUtil.IsElementDisplayed(Pequenin);
-		public bool isPequieninLogoOk() => AvailabilityUtil.GetDataSrcAttribute(Pequenin, Driver);
+		public bool IsPequieninLogoOk() => AvailabilityUtil.GetDataSrcAttribute(Pequenin, Driver);
 
 		//Colhogar
 		public bool IsColhogarLogoVisible() => AvailabilityUtil.IsElementDisplayed(Colhogar);

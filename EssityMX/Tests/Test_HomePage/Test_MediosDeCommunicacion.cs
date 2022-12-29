@@ -29,7 +29,7 @@ namespace EssityMX.Tests.Test_HomePage
 			Assert.Multiple(() =>
 			{
 				Assert.IsTrue(mediosDeCommunicacion.IsHeroBannerVisible(), "Hero banner is not visible");
-				//Assert.IsTrue(mediosDeCommunicacion.IsHeroBannerImgStatusOk(), "Image is not status 200");
+				Assert.IsTrue(mediosDeCommunicacion.IsHeroBannerImgStatusOk(), "Image is not status 200");
 			});
 			test.Log(Status.Pass, "Test_56_IsHeroBannerVisible - PASS");
 		}
@@ -45,7 +45,7 @@ namespace EssityMX.Tests.Test_HomePage
 			Assert.Multiple(() =>
 			{
 				Assert.IsTrue(mediosDeCommunicacion.IsTheFirstThreeColumnCtaVisible(), "The First Three Column Cta is not visible");
-				//Assert.IsTrue(mediosDeCommunicacion.IsTheFirstThreeColumnCtaImgStatusOk(), "Image is not status 200");
+				Assert.IsTrue(mediosDeCommunicacion.IsTheFirstThreeColumnCtaImgStatusOk(), "Image is not status 200");
 			});
 			test.Log(Status.Pass, "Test_57_IsTheFirstThreeColumnCtaVisible - PASS");
 		}

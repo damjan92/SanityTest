@@ -33,7 +33,11 @@ namespace EssityMX.Tests.Test_HomePage
 			Marcas marcas = new Marcas(Driver);
 			BasePage.OpenPage(ConfigReader.MarcasLandingPage);
 			AcceptCoockies.ClickOnAcceptCoockies();
-			Assert.IsTrue(marcas.IsTheFristHeroBannerVisible(), "The first hero banner is not visible");
+			Assert.Multiple(() =>
+			{
+				Assert.IsTrue(marcas.IsTheFirstHeroBannerImgStatusOk(), "Hero banner image is not status 200");
+				Assert.IsTrue(marcas.IsTheFristHeroBannerVisible(), "The first hero banner is not visible");
+			});
 		}
 
 		[Test]
@@ -72,6 +76,7 @@ namespace EssityMX.Tests.Test_HomePage
 			Assert.Multiple(() =>
 			{
 				Assert.IsTrue(marcas.IsTorkLogoVisible(), "Tork icon is not visible");
+				Assert.IsTrue(marcas.IsLiberoLogoVisible(), "Libre icon is not visible");
 				Assert.IsTrue(marcas.IsFamiliaLogoVisible(), "Familia icon is not visible");
 				Assert.IsTrue(marcas.IsVindaLogoVisible(), "Vinda icon is not status ok");
 				Assert.IsTrue(marcas.IsDrypersLogoVisible(), "Drypers icon is not visible");
@@ -110,10 +115,11 @@ namespace EssityMX.Tests.Test_HomePage
 			Assert.Multiple(() =>
 			{
 				Assert.IsTrue(marcas.IsTorkLogoOk(), "Tork logo is not Status 200");
-				Assert.IsTrue(marcas.IsFamiliaLogoOk(), "Familia logo is not Status 200");
+				Assert.IsTrue(marcas.IsLiberoLogoOk(), "Libero loko is not status 200");
+				Assert.IsTrue(marcas.IsFamiliaLogoOk());
 				Assert.IsTrue(marcas.IsVindaLogoOk(), "Vinda logo is not Status 200");
 				Assert.IsTrue(marcas.IsDrypersLogoOk(), "Drypers logo is not Status 200");
-				Assert.IsTrue(marcas.isPequieninLogoOk(), "Pequienin logo is not Status 200");
+				Assert.IsTrue(marcas.IsPequieninLogoOk(), "Pequienin logo is not Status 200");
 				Assert.IsTrue(marcas.IsColhogarLogoOk(), "Colhogar logo is not Status 200");
 				Assert.IsTrue(marcas.IsCosyLogoOk(), "Cosy logo is not Status 200");
 				Assert.IsTrue(marcas.IsCushelleLogoOk(), "Cushelle logo is not Status 200");
