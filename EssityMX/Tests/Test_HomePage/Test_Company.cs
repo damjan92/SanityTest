@@ -112,5 +112,14 @@ namespace EssityMX.Tests.Test_HomePage
 			AcceptCoockies.ClickOnAcceptCoockies();
 			Assert.IsTrue(company.IsThirdBoxThreeColVisible(), "[Test_09]Two column box  is not visible");
 		}
+
+		[Test]
+		public void Test_VerificationOfPageTitle()
+		{
+			Company company = new Company(Driver);
+			BasePage.OpenPage(ConfigReader.CompanyLandingPageUrl);
+			AcceptCoockies.ClickOnAcceptCoockies();
+			Assert.AreEqual(BasePage.GetTitle(), "About our Company | Essity", "Titles are not the same");
+		}
 	}
 }

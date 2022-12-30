@@ -19,7 +19,7 @@ namespace SanityTest.ConfigFiles
 		public static string CarrerasLandingPage => ConfigurationManager.AppSettings["carreras"];
 		public static string InnovacionLandingPage => ConfigurationManager.AppSettings["innovacion"];
 		public static string MediosDeCommunicacionLandingPage => ConfigurationManager.AppSettings["medios"];
-
+		public static string BoletinesDePrensa => ConfigurationManager.AppSettings["press"];
 	}
 
 }

@@ -11,32 +11,6 @@ namespace SanityTest.Helpers
 {
 	public static class RestResponseValidation
 	{
-		public  static async Task<bool> GetStatusCode(string getUrl)
-		{
-			try
-			{
-				RestClient restClient = new RestClient();
-				RestRequest restRequest = new RestRequest(getUrl, Method.Get);
-				RestResponse restResponse = await restClient.ExecuteAsync(restRequest);
-				int responseCode = (int)restResponse.StatusCode;
-				if (responseCode == 200)
-				{
-					LogUtil.Log("Info[Rest]: Response is 200");
-					return true;
-				}
-				else
-				{
-					LogUtil.Log($"Error[Rest]: Response is not 200, response is: {responseCode}");
-					return false;
-				}
-			}
-			catch(Exception e)
-			{
-				LogUtil.Log($"Error[RestReposnse]{e.Message}");
-				return false;
-			}
-				
-		}
 
 		public static async Task<bool> GetStatusCodeHttp(string url)
 		{
@@ -63,6 +37,33 @@ namespace SanityTest.Helpers
 				return false;
 			}
 		}
+
+		//public  static async Task<bool> GetStatusCode(string getUrl)
+		//{
+		//	try
+		//	{
+		//		RestClient restClient = new RestClient();
+		//		RestRequest restRequest = new RestRequest(getUrl, Method.Get);
+		//		RestResponse restResponse = await restClient.ExecuteAsync(restRequest);
+		//		int responseCode = (int)restResponse.StatusCode;
+		//		if (responseCode == 200)
+		//		{
+		//			LogUtil.Log("Info[Rest]: Response is 200");
+		//			return true;
+		//		}
+		//		else
+		//		{
+		//			LogUtil.Log($"Error[Rest]: Response is not 200, response is: {responseCode}");
+		//			return false;
+		//		}
+		//	}
+		//	catch(Exception e)
+		//	{
+		//		LogUtil.Log($"Error[RestReposnse]{e.Message}");
+		//		return false;
+		//	}
+
+		//}
 
 	}
 }

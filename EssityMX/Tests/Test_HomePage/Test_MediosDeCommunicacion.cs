@@ -97,5 +97,14 @@ namespace EssityMX.Tests.Test_HomePage
 			AcceptCoockies.ClickOnAcceptCoockies();
 			Assert.IsTrue(mediosDeCommunicacion.IsShowEmailFunctionalityWork(), "Show email label does not work");
 		}
+
+		[Test]
+		public void Test_VerificationOfPageTitle()
+		{
+			MediosDeCommunicacion mediosDeCommunicacion = new MediosDeCommunicacion(Driver);
+			BasePage.OpenPage(ConfigReader.MediosDeCommunicacionLandingPage);
+			AcceptCoockies.ClickOnAcceptCoockies();
+			Assert.AreEqual(BasePage.GetTitle(), "Prensa", "Titles are not the same");
+		}
 	}
 }

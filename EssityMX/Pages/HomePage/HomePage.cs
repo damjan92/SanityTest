@@ -19,53 +19,29 @@ namespace EssityMX.Pages.HomePage
 
 		IWebElement FirstHeroBanner => Driver.FindElement
 			(By.XPath("//body/section[contains(@class,'section section--hero')]/div[contains(@typeof,'Region')]/div[1]/div[1]/div[1]/div[1]/img[1]"));
-		IWebElement FirstHeroBannerImg => Driver.FindElement(By.XPath("//body/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement FirstHeroBannerImg => Driver.FindElement(By.CssSelector("img[alt*='Essity-CoverImage_2880x1300.jpg']"));
 		IWebElement BrandComponent => Driver.FindElement(By.CssSelector(".hero-brands-list.js-brands-carousel"));
 		IWebElement SecondHeroBanner => Driver.FindElement
 			(By.XPath("//body/section[@class='section section--hero']/div[@typeof='Region']/div[1]/div[1]/div[1]/div[1]/img[1]"));
-		IWebElement SecondHeroBannerImg => Driver.FindElement(By.XPath("//body/section[1]/div[1]/div[3]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement SecondHeroBannerImg => Driver.FindElement(By.CssSelector("img[alt*='Mother_and_two_boys_with_kite_on_beach_1.jpg ']"));
 		IWebElement ThirdHeroBanner => Driver.FindElement
 			(By.XPath("//body/section[@class='section section--hero']/div[@typeof='Region']/div[1]/div[1]/div[1]/div[1]/img[1]"));
-		IWebElement ThirdHeroBannerImg => Driver.FindElement(By.XPath("//body/section[1]/div[1]/div[4]/div[1]/div[1]/div[1]/img[1]"));
+		IWebElement ThirdHeroBannerImg => Driver.FindElement(By.CssSelector("img[alt*='Two_young_women_workout_in_urban_area_10.tif']"));
 
 		//The first Hero banner
-		public bool IsFirstHeroBannerVisible()
-		{
-			return AvailabilityUtil.IsElementDisplayed(FirstHeroBanner);
-		}
+		public bool IsFirstHeroBannerVisible() => AvailabilityUtil.IsElementDisplayed(FirstHeroBanner);
+		public bool IsFirstImageOk() => AvailabilityUtil.GetDataSrcAttribute(FirstHeroBannerImg, Driver);
 
-		public bool IsFirstImageOk()
-		{
-			return AvailabilityUtil.GetDataSrcAttribute(FirstHeroBannerImg, Driver);
-		}
-
-		public bool IsBrandComponentVisible()
-		{
-			return AvailabilityUtil.IsElementDisplayed(BrandComponent);
-		} 
+		public bool IsBrandComponentVisible() => AvailabilityUtil.IsElementDisplayed(BrandComponent);
 
 		//The second Hero banner
-		public bool IsSecondHeroBannerVisible()
-		{
-			return AvailabilityUtil.IsElementDisplayed(SecondHeroBanner);
-		}
-
-		public bool IsSecondImageOK()
-		{
-			return AvailabilityUtil.GetDataSrcAttribute(SecondHeroBannerImg, Driver);
-		}
+		public bool IsSecondHeroBannerVisible() => AvailabilityUtil.IsElementDisplayed(SecondHeroBanner);
+		public bool IsSecondImageOK() => AvailabilityUtil.GetDataSrcAttribute(SecondHeroBannerImg, Driver);
 
 		//The Third Hero banner
-		public bool IsThirhHeroBannerVisible()
-		{
-			return AvailabilityUtil.IsElementDisplayed(ThirdHeroBanner);
-		}
+		public bool IsThirhHeroBannerVisible() => AvailabilityUtil.IsElementDisplayed(ThirdHeroBanner);
+		public bool IsThirdImageOK() => AvailabilityUtil.GetDataSrcAttribute(ThirdHeroBannerImg, Driver);
 
-		public bool IsThirdImageOK()
-		{
-			return AvailabilityUtil.GetDataSrcAttribute(ThirdHeroBannerImg, Driver);
-		}
-		
 
 	}
 }

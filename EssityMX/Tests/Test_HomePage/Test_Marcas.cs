@@ -159,5 +159,14 @@ namespace EssityMX.Tests.Test_HomePage
 				Assert.IsTrue(marcas.IsTheFourthTwoColumnBoxVisible(), "The fourth columnd box is visible");
 			});
 		}
+
+		[Test]
+		public void Test_VerificationOfPageTitle()
+		{
+			Marcas marcas = new Marcas(Driver);
+			BasePage.OpenPage(ConfigReader.MarcasLandingPage);
+			AcceptCoockies.ClickOnAcceptCoockies();
+			Assert.AreEqual(BasePage.GetTitle(), "Las marcas de Essity", "Titles are not the same");
+		}
 	}
 }

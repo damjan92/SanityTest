@@ -370,6 +370,7 @@
     <Compile Include="Pages\HomePage\HomePage.cs" />
     <Compile Include="Pages\HomePage\MainPageFooter.cs" />
     <Compile Include="Pages\HomePage\MainPageHeader.cs" />
+    <Compile Include="Pages\LandingPages\BoletinesDePrensa.cs" />
     <Compile Include="Pages\LandingPages\Carreras.cs" />
     <Compile Include="Pages\LandingPages\Company.cs" />
     <Compile Include="Pages\LandingPages\Innnovacion.cs" />
@@ -377,6 +378,7 @@
     <Compile Include="Pages\LandingPages\MediosDeCommunicacion.cs" />
     <Compile Include="Pages\LandingPages\Sustentabilidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Test_HomePage\Test_BoletinesDePrensa.cs" />
     <Compile Include="Tests\Test_HomePage\Test_Carreras.cs" />
     <Compile Include="Tests\Test_HomePage\Test_Company.cs" />
     <Compile Include="Tests\Test_HomePage\Test_HomePage.cs" />

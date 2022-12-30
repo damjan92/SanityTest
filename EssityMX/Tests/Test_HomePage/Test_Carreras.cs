@@ -158,5 +158,14 @@ namespace EssityMX.Tests.Test_HomePage
 				Assert.IsTrue(carreras.IsTheFourthFourColumnCtaVisible(), "The four fourth column is not visible");
 			});
 		}
+
+		[Test]
+		public void Test_VerificationOfPageTitle()
+		{
+			Carreras carreras = new Carreras(Driver);
+			BasePage.OpenPage(ConfigReader.CarrerasLandingPage);
+			AcceptCoockies.ClickOnAcceptCoockies();
+			Assert.AreEqual(BasePage.GetTitle(), "Essity Careers - Improving lives, every day | Essity", "Titles are not the same");
+		}
 	}
 }

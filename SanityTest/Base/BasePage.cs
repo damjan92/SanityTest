@@ -47,7 +47,7 @@ namespace SanityTest.Base
 			{
 				LogUtil.Log($"Error[Base:GetTitle]: {e.Message}");
 			}
-			return Driver.Title;
+			return null;
 		}
 
 

@@ -22,8 +22,7 @@ namespace EssityMX.Pages.HomePage
 		{
 			try
 			{
-				WaitUtil.WaitToBeVisibleAndClickable(AcceptCoockieSelector, Driver);
-				return ClickUtil.Click(AcceptCoockieSelector);
+				return WaitUtil.WaitToBeVisibleAndClickable(AcceptCoockieSelector, Driver);
 			}
 			catch (Exception e)
 			{

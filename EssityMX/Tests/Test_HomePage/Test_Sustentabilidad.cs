@@ -146,5 +146,14 @@ namespace EssityMX.Tests.Test_HomePage
 
 			});
 		}
+
+		[Test]
+		public void Test_VerificationOfPageTitle()
+		{
+			Sustentabilidad sustentabilidad = new Sustentabilidad(Driver);
+			BasePage.OpenPage(ConfigReader.SustentabilidadLandingPage);
+			AcceptCoockies.ClickOnAcceptCoockies();
+			Assert.AreEqual(BasePage.GetTitle(), "Crear valor sustentable juntos", "Titles are not the same");
+		}
 	}
 }

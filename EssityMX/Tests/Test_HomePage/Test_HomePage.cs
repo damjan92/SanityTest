@@ -104,6 +104,16 @@ namespace EssityMX.Tests.Test_HomePage
 			});
 		}
 
+		[Test]
+		public void Test_VerificationOfPageTitle()
+		{
+			HomePage company = new HomePage(Driver);
+			BasePage.OpenPage(ConfigReader.HomepageUrl);
+			AcceptCoockies.ClickOnAcceptCoockies();
+			Assert.AreEqual(BasePage.GetTitle(),
+				"Essity - una compañía líder en el mercado global del sector de higiene y salud | Global Corporate", "Titles are not the same");
+		}
+
 
 	}
 }

@@ -66,5 +66,14 @@ namespace EssityMX.Tests.Test_HomePage
 			});
 		}
 
+		[Test]
+		public void Test_VerificationOfPageTitle()
+		{
+			Innnovacion innnovacion = new Innnovacion(Driver);
+			BasePage.OpenPage(ConfigReader.InnovacionLandingPage);
+			AcceptCoockies.ClickOnAcceptCoockies();
+			Assert.AreEqual(BasePage.GetTitle(), "Life-changing innovations | Essity", "Titles are not the same");
+		}
+
 	}
 }
